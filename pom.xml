@@ -5,8 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.matteria.util.saferunner</groupId>
-    <artifactId>safe-safeRunner</artifactId>
+    <artifactId>safe-runner</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <description>Safe Runner Library to execute potentially unsafe tasks with advanced error handling.</description>
+    <url>https://github.com/andreystalnoy/safe-runnner</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -14,6 +25,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit-jupiter.version>5.5.2</junit-jupiter.version>
     </properties>
+
+    <developers>
+        <developer>
+            <name>Andrey Stalnoy</name>
+            <email>andrey.stalnoy@outlook.com</email>
+        </developer>
+    </developers>
 
     <dependencies>
         <dependency>
@@ -43,5 +61,10 @@
             </plugin>
         </plugins>
     </build>
-    
+
+    <scm>
+        <connection>scm:git:git://github.com/andreystalnoy/safe-runner.git</connection>
+        <developerConnection>scm:git:ssh://github.com/andreystalnoy/safe-runner.git</developerConnection>
+        <url>https://github.com/andreystalnoy/safe-runner</url>
+    </scm>
 </project>
