@@ -24,7 +24,6 @@ class SafeRunnerTest {
 
     @Test
     void testUnexpectedExceptionHandling() {
-        Task task = () -> { throw new IllegalArgumentException("Test Exception"); };
         SafeRunner runner = SafeRunner.configure()
                 .task(tasks[0], NullPointerException.class);
 
@@ -41,7 +40,6 @@ class SafeRunnerTest {
 
     @Test
     void testRunAndCatchScenario() {
-        Task task = () -> { /* No exception thrown */ };
         SafeRunner runner = SafeRunner.configure()
                 .task(tasks[1], IllegalArgumentException.class);
 
