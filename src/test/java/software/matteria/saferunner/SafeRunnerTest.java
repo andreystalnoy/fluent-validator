@@ -1,8 +1,8 @@
-package software.matteria.util.saferunner;
+package software.matteria.saferunner;
 
-import software.matteria.util.saferunner.exception.SafeRunnerException;
-import software.matteria.util.saferunner.exception.UnexpectedBehaviorException;
-import software.matteria.util.saferunner.task.Task;
+import software.matteria.saferunner.exception.SafeRunnerException;
+import software.matteria.saferunner.exception.UnexpectedBehaviorException;
+import software.matteria.saferunner.task.Task;
 import org.junit.jupiter.api.Test;
 
 
@@ -35,9 +35,7 @@ class SafeRunnerTest {
         SafeRunner runner = SafeRunner.configure()
                 .task(tasks[1]);
 
-        assertDoesNotThrow(() -> {
-            runner.run();
-        });
+        assertDoesNotThrow(() -> runner.run());
     }
 
     @Test
@@ -46,11 +44,9 @@ class SafeRunnerTest {
                 .task(tasks[1], IllegalArgumentException.class);
 
         assertDoesNotThrow(() -> {
-            runner.run((e) -> {
-                e.getExecutionExceptions().forEach(ex -> {
-                    /* Some errors handling */
-                });
-            });
+            runner.run((e) -> e.getExecutionExceptions().forEach(ex -> {
+                /* Some errors handling */
+            }));
         });
     }
 }

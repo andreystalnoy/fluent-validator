@@ -1,4 +1,4 @@
-package software.matteria.util.saferunner.exception;
+package software.matteria.saferunner.exception;
 
 import java.util.List;
 
