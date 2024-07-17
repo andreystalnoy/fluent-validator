@@ -1,10 +1,10 @@
-package com.matteria.util.saferunner;
+package software.matteria.util.saferunner;
 
-import com.matteria.util.saferunner.exception.SafeRunnerException;
-import com.matteria.util.saferunner.exception.UnexpectedBehaviorException;
-import com.matteria.util.saferunner.task.BoundedSafeTask;
-import com.matteria.util.saferunner.task.SafeTask;
-import com.matteria.util.saferunner.task.Task;
+import software.matteria.util.saferunner.exception.SafeRunnerException;
+import software.matteria.util.saferunner.exception.UnexpectedBehaviorException;
+import software.matteria.util.saferunner.task.BoundedSafeTask;
+import software.matteria.util.saferunner.task.SafeTask;
+import software.matteria.util.saferunner.task.Task;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +37,7 @@ public class SafeRunner {
         }
     }
 
-    public void runAndCatch(Consumer<SafeRunnerException> safeRunnerExceptionConsumer) {
+    public void run(Consumer<SafeRunnerException> safeRunnerExceptionConsumer) {
         List<Exception> exceptions = process(tasks);
         if (!exceptions.isEmpty()) {
             safeRunnerExceptionConsumer.accept(new SafeRunnerException("Tasks execution failed", exceptions));

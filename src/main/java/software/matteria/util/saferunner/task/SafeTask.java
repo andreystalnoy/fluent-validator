@@ -1,4 +1,4 @@
-package com.matteria.util.saferunner.task;
+package software.matteria.util.saferunner.task;
 
 public class SafeTask {
     private final Task task;
