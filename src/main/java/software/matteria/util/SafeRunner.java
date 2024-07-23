@@ -1,10 +1,10 @@
-package software.matteria.saferunner;
+package software.matteria.util;
 
-import software.matteria.saferunner.exception.SafeRunnerException;
-import software.matteria.saferunner.task.SafeTask;
-import software.matteria.saferunner.task.Task;
-import software.matteria.saferunner.exception.UnexpectedBehaviorException;
-import software.matteria.saferunner.task.BoundedSafeTask;
+import software.matteria.util.exception.SafeRunnerException;
+import software.matteria.util.task.SafeTask;
+import software.matteria.util.task.Task;
+import software.matteria.util.exception.UnexpectedBehaviorException;
+import software.matteria.util.task.BoundedSafeTask;
 
 import java.util.ArrayList;
 import java.util.Arrays;

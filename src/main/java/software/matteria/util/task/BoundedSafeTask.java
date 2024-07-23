@@ -1,4 +1,4 @@
-package software.matteria.saferunner.task;
+package software.matteria.util.task;
 
 public class BoundedSafeTask extends SafeTask {
     private final Class<? extends Exception>[] expectedExceptions;
